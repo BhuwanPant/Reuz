@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Mock data
 const phones = [
-  { id: 1, brand: 'Apple', model: 'iPhone 12', image: '/images/iphone.jpg' },
+  { id: 1, brand: 'Apple', model: 'iPhone 12', image: 'https://images.app.goo.gl/8k7YcCPVE2s6nX2CA' },
   { id: 2, brand: 'Samsung', model: 'Galaxy S21', image: '/images/samsung.jpg' },
   { id: 3, brand: 'Google', model: 'Pixel 5', image: 'https://example.com/pixel5.jpg' },
 ];
