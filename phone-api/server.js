@@ -6,7 +6,6 @@ const port = 3001;
 const corsOptions = {
   origin: 'https://reuz-2.onrender.com',
 };
-const iphone = require('../images/iphone.jpg')
 app.use(cors(corsOptions));
 // Use express.static to serve the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
@@ -15,7 +14,7 @@ app.use(express.json());
 
 // Mock data
 const phones = [
-  { id: 1, brand: 'Apple', model: 'iPhone 12', image: iphone },
+  { id: 1, brand: 'Apple', model: 'iPhone 12', image: '../images/iphone.jpg'},
   { id: 2, brand: 'Samsung', model: 'Galaxy S21', image: '/images/samsung.jpg' },
   { id: 3, brand: 'Google', model: 'Pixel 5', image: 'https://example.com/pixel5.jpg' },
 ];
