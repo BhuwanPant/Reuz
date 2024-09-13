@@ -6,7 +6,7 @@ const port = 3001;
 const corsOptions = {
   origin: 'https://reuz-2.onrender.com',
 };
-
+const iphone = require('../images/iphone.jpg')
 app.use(cors(corsOptions));
 // Use express.static to serve the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
