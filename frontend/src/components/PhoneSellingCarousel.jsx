@@ -42,9 +42,9 @@ const PhoneSellingCarousel = ({ isOpen, onClose }) => {
     try {
       setLoading(true);
       const [brandsResponse, variantsResponse, timeSlotsResponse] = await Promise.all([
-        axios.get('http://localhost:3001/phone-brands'),
-        axios.get('http://localhost:3001/phone-variants'),
-        axios.get('http://localhost:3001/time-slots'),
+        axios.get('https://reuz-i.onrender.com/phone-brands'),
+        axios.get('https://reuz-i.onrender.com/phone-variants'),
+        axios.get('https://reuz-i.onrender.com/time-slots'),
       ]);
       setPhoneBrands(brandsResponse.data);
       setPhoneVariants(variantsResponse.data);
@@ -59,7 +59,7 @@ const PhoneSellingCarousel = ({ isOpen, onClose }) => {
   const fetchPhoneSeries = async (brand) => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:3001/phone-series/${brand}`);
+      const response = await axios.get(`https://reuz-i.onrender.com/phone-series/${brand}`);
       setPhoneSeries(prevState => ({...prevState, [brand]: response.data}));
       setLoading(false);
     } catch (err) {
@@ -71,7 +71,7 @@ const PhoneSellingCarousel = ({ isOpen, onClose }) => {
   const fetchEstimatedPrice = async () => {
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:3001/estimate-price', {
+      const response = await axios.post('https://reuz-i.onrender.com/estimate-price', {
         brand: selectedBrand,
         series: selectedSeries,
         variant: selectedVariant,
