@@ -26,7 +26,7 @@ const PhoneGrid = ({ onPhoneSelect }) => {
           const response = await axios.get('https://reuz-i.onrender.com/phones');
           setPhones(response.data);
           setLoading(false);
-        }, 4000);  // 4-second delay
+        }, 1000);  // 4-second delay
       } catch (err) {
         setError('Failed to fetch phones. Please try again later.');
         setLoading(false);
