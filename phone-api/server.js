@@ -3,11 +3,14 @@ const cors = require('cors');
 const path = require('path'); // Required for resolving file paths
 const app = express();
 const port = 3001;
+const corsOptions = {
+  origin: 'https://reuz-2.onrender.com',
+};
 
+app.use(cors(corsOptions));
 // Use express.static to serve the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(cors());
 app.use(express.json());
 
 // Mock data
