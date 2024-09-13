@@ -23,7 +23,7 @@ const PhoneGrid = ({ onPhoneSelect }) => {
         
         // Delay the API call by 4 seconds (4000 milliseconds)
         setTimeout(async () => {
-          const response = await axios.get('http://localhost:3001/phones');
+          const response = await axios.get('https://reuz-i.onrender.com/phones');
           setPhones(response.data);
           setLoading(false);
         }, 4000);  // 4-second delay
