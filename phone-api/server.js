@@ -8,7 +8,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 // Use express.static to serve the "public" directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '')));
 
 app.use(express.json());
 
